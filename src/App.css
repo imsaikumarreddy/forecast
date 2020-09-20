@@ -1,10 +1,65 @@
+html,body,#root{
+  width: 100%;
+  height: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
 .App {
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.app-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.clear-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.left-container{
+  width: 30%;
+  /* background-color: #ccc; */
+  position: relative;
+}
+.clear-button{
+  float: right;
+}  
+.right-container{
+  width: 70%;
+  /* background-color: aqua; */
+  }
+
+.place-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.weather-content{
+  width: 100%;
+  display: flex;
+}
+.content-icon{
+  width: 30%;
+}
+.content-detials{
+  width: 70%;
+  text-align: left;
+}
+
+.upcoming-forecast{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +91,4 @@
     transform: rotate(360deg);
   }
 }
+
