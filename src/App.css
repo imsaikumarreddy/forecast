@@ -80,15 +80,12 @@ h1,h2,h3,h4,h5,h6{
   font-size: 25px;
   cursor: pointer;
 }
-.small-divider{
-  margin: 5%;
-}
 .recent-added-locations{
   width: 100%;
   text-align: left;
 }
 .recent-added-locations p {
-  margin: 2%;
+  margin: 1%;
 }
 .recent-location p {
   width: 20%;
@@ -101,13 +98,20 @@ h1,h2,h3,h4,h5,h6{
 }
 .small-divider{
   border-top: 1px solid black;
+  margin: 3%;
 }
 .right-container{
   width: 70%;
   border: .5px solid black;
   margin: 10px; 
   }
-
+.right-container i{
+  cursor: pointer;
+}
+.error-message{
+  color: rgb(190, 63, 63);
+  font-size: 12px;
+}
 .place-container{
   display: flex;
   justify-content: space-between;

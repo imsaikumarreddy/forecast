@@ -1,21 +1,23 @@
 import React from 'react'
 
 export default function LeftContainer (props){
-   
-        let { toCelsius,RenderIcon,clearRecentAdded, clearLocation, SetCity ,ShowMoreDetails, city, RecentlyAddedLocations, handleClick, reload }= props;
+
+        let { toCelsius,error,RenderIcon,clearRecentAdded, clearLocation, handleChange ,ShowMoreDetails, city,
+           RecentlyAddedLocations, handleClick, reload }= props;
         return(
             <div className="left-container">
                 <div className="add-location-container">
-                    <input type="text" name="city" value={city} placeholder="Type city name" onChange={(e)=>SetCity(e.target.value)} />
+                    <input type="text" name="city" value={city} placeholder="Search city name" onChange={(e)=>handleChange(e.target.value)} />
                     <i className="fa fa-plus-circle" onClick={handleClick}></i>
                 </div>
+                {error!=='' ?<p className="error-message">{error}</p>:null}
                 <div className="divider"></div>
                 <div className="recent-added-locations">
                     <p>Recent locations</p>
                     <div className="small-divider"></div>
                     <div className="added-locations">
                     {
-                        RecentlyAddedLocations.map((each,index)=>{
+                        RecentlyAddedLocations.sort((a,b)=>b.id - a.id).map((each,index)=>{
                         return(
                             <div className="recent-location" key={index}>
                                 <p className="cursor" onClick={()=>ShowMoreDetails(each)}>{each.name}</p>
