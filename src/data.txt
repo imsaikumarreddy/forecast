@@ -1,0 +1,67 @@
+PS D:\forecast> git status
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/.vs/
+        src/beta.js
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\forecast> git add .
+PS D:\forecast> git commit -m 'fake commit '
+[leftpannel 4de326b] fake commit
+ 4 files changed, 6 insertions(+)
+ create mode 100644 src/.vs/slnx.sqlite
+ create mode 100644 src/beta.js
+PS D:\forecast> git branch
+  develop
+* leftpannel
+  master
+  saiDev
+PS D:\forecast> git init
+Reinitialized existing Git repository in D:/forecast/.git/
+PS D:\forecast> git checkout
+Your branch is ahead of 'origin/leftpannel' by 2 commits.
+  (use "git push" to publish your local commits)
+PS D:\forecast> git status
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+nothing added to commit but untracked files present (use "git add" to track)
+Switched to branch 'saiDev'
+PS D:\forecast> git add src/app.txt
+PS D:\forecast> git commit -m 'App.txt added to this branch'
+[saiDev 8e6a719] App.txt added to this branch
+ 1 file changed, 1 insertion(+)
+PS D:\forecast> git status
+On branch saiDev
+nothing to commit, working tree clean
+PS D:\forecast> git push
+fatal: The current branch saiDev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin saiDev
+
+PS D:\forecast> git push --set origin saiDev
+Counting objects: 100% (6/6), done.
+Writing objects: 100% (4/4), 368 bytes | 368.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+To https://github.com/imsaikumarreddy/forecast.git
+   de4af3f..8e6a719  saiDev -> saiDev
+Branch 'saiDev' set up to track remote branch 'saiDev' from 'origin'.
+PS D:\forecast> git push
+Everything up-to-date
+PS D:\forecast> git add src/app.txt
+PS D:\forecast> git commit -m 'updates app.txt file'
+[saiDev b3e4d10] updates app.txt file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\forecast> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 348 bytes | 348.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/imsaikumarreddy/forecast.git
+   8e6a719..b3e4d10  saiDev -> saiDev
